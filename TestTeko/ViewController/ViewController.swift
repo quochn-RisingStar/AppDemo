@@ -53,6 +53,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onTapSubmit(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let submitViewController = storyBoard.instantiateViewController(withIdentifier: "SubmitViewController") as! SubmitViewController
+        submitViewController.modalPresentationStyle = .custom
+        submitViewController.transitioningDelegate = self
+        submitViewController.modalTransitionStyle = .coverVertical
+        submitViewController.colors = colors
+        submitViewController.productsError = productsError
+        present(submitViewController, animated: true)
+      
     }
 }
 
@@ -143,4 +152,14 @@ extension ViewController: UITableViewCellDelegate{
         nextView?.colors = colors
         
     }
+}
+
+extension ViewController: UIViewControllerTransitioningDelegate{
+        func presentationController(
+            forPresented presented: UIViewController,
+            presenting: UIViewController?,
+            source: UIViewController
+        ) -> UIPresentationController? {
+            return ResizeSubmitViewController(presentedViewController: presented, presenting: presentingViewController)
+        }
 }

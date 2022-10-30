@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="DeviceChangeTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="DeviceChangeTableViewCell" customModule="TestTeko" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="470" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="470" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.macro" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9pJ-YU-h5s">
+                        <rect key="frame" x="16" y="35" width="60" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Lgs-U8-xUI"/>
+                            <constraint firstAttribute="height" constant="50" id="sL7-U5-wAu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Error code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpQ-w0-g1O">
+                        <rect key="frame" x="96" y="35.5" width="160" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtI-aF-UyS">
+                        <rect key="frame" x="96" y="63.5" width="38" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="color" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud8-GA-l9i">
+                        <rect key="frame" x="96" y="89" width="38.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Device" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-r1-5YP">
+                        <rect key="frame" x="96" y="10" width="101.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ud8-GA-l9i" firstAttribute="top" secondItem="GtI-aF-UyS" secondAttribute="bottom" constant="5" id="0Zv-Yv-Bcu"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="GtI-aF-UyS" secondAttribute="trailing" constant="16" id="5en-Ln-29Z"/>
+                    <constraint firstItem="9pJ-YU-h5s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6d3-ax-MYb"/>
+                    <constraint firstItem="XpQ-w0-g1O" firstAttribute="leading" secondItem="9pJ-YU-h5s" secondAttribute="trailing" constant="20" id="AsS-79-vOV"/>
+                    <constraint firstItem="5bt-r1-5YP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="BxT-3W-bff"/>
+                    <constraint firstItem="GtI-aF-UyS" firstAttribute="leading" secondItem="9pJ-YU-h5s" secondAttribute="trailing" constant="20" id="DTS-QB-1B9"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ud8-GA-l9i" secondAttribute="trailing" constant="16" id="RRO-HK-uBr"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XpQ-w0-g1O" secondAttribute="trailing" constant="16" id="aPu-HX-6y5"/>
+                    <constraint firstItem="GtI-aF-UyS" firstAttribute="top" secondItem="XpQ-w0-g1O" secondAttribute="bottom" constant="5" id="gFd-jw-X7C"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5bt-r1-5YP" secondAttribute="trailing" constant="16" id="lSo-o3-er7"/>
+                    <constraint firstItem="Ud8-GA-l9i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="96" id="mfg-B7-eaW"/>
+                    <constraint firstItem="XpQ-w0-g1O" firstAttribute="top" secondItem="5bt-r1-5YP" secondAttribute="bottom" constant="5" id="qNj-cg-zlS"/>
+                    <constraint firstItem="9pJ-YU-h5s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="tmG-Q7-5bQ"/>
+                    <constraint firstItem="5bt-r1-5YP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="96" id="wx5-yB-KXK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="codeLabel" destination="GtI-aF-UyS" id="Z0C-7a-AwE"/>
+                <outlet property="colorLabel" destination="Ud8-GA-l9i" id="zch-S4-35g"/>
+                <outlet property="deviceImage" destination="9pJ-YU-h5s" id="vgI-an-8GG"/>
+                <outlet property="errorCodeLabel" destination="XpQ-w0-g1O" id="0Bt-jP-cOH"/>
+                <outlet property="nameDeviceLabel" destination="5bt-r1-5YP" id="dXQ-sI-sCz"/>
+            </connections>
+            <point key="canvasLocation" x="246.37681159420291" y="93.75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="camera.macro" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

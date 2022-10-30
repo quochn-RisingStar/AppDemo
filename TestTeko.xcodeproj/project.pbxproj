@@ -17,6 +17,10 @@
 		0BC1543B290E8AE10035BB43 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC15439290E8AE10035BB43 /* TextFieldTableViewCell.xib */; };
 		0BC15440290E8D0E0035BB43 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC1543E290E8D0E0035BB43 /* SelectionTableViewCell.swift */; };
 		0BC15441290E8D0E0035BB43 /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC1543F290E8D0E0035BB43 /* SelectionTableViewCell.xib */; };
+		0BC15444290EBD280035BB43 /* ResizeSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC15443290EBD280035BB43 /* ResizeSubmitViewController.swift */; };
+		0BC15446290EBF220035BB43 /* SubmitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC15445290EBF220035BB43 /* SubmitController.swift */; };
+		0BC15449290EC8DC0035BB43 /* DeviceChangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC15447290EC8DC0035BB43 /* DeviceChangeTableViewCell.swift */; };
+		0BC1544A290EC8DC0035BB43 /* DeviceChangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC15448290EC8DC0035BB43 /* DeviceChangeTableViewCell.xib */; };
 		0BE93686290D579A00D18B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE93685290D579A00D18B10 /* AppDelegate.swift */; };
 		0BE93688290D579A00D18B10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE93687290D579A00D18B10 /* SceneDelegate.swift */; };
 		0BE9368A290D579A00D18B10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE93689290D579A00D18B10 /* ViewController.swift */; };
@@ -38,6 +42,10 @@
 		0BC15439290E8AE10035BB43 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		0BC1543E290E8D0E0035BB43 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
 		0BC1543F290E8D0E0035BB43 /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		0BC15443290EBD280035BB43 /* ResizeSubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeSubmitViewController.swift; sourceTree = "<group>"; };
+		0BC15445290EBF220035BB43 /* SubmitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitController.swift; sourceTree = "<group>"; };
+		0BC15447290EC8DC0035BB43 /* DeviceChangeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceChangeTableViewCell.swift; sourceTree = "<group>"; };
+		0BC15448290EC8DC0035BB43 /* DeviceChangeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceChangeTableViewCell.xib; sourceTree = "<group>"; };
 		0BE93682290D579A00D18B10 /* TestTeko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTeko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE93685290D579A00D18B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE93687290D579A00D18B10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +83,7 @@
 			children = (
 				0BE93689290D579A00D18B10 /* ViewController.swift */,
 				0BC15430290E629F0035BB43 /* EditProductViewController.swift */,
+				0BC15445290EBF220035BB43 /* SubmitController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -108,6 +117,7 @@
 				0BE93690290D579C00D18B10 /* LaunchScreen.storyboard */,
 				0BE93693290D579C00D18B10 /* Info.plist */,
 				0BC15432290E72400035BB43 /* StretchyTableHeaderView.swift */,
+				0BC15443290EBD280035BB43 /* ResizeSubmitViewController.swift */,
 			);
 			path = TestTeko;
 			sourceTree = "<group>";
@@ -123,6 +133,8 @@
 				0BC15439290E8AE10035BB43 /* TextFieldTableViewCell.xib */,
 				0BC1543E290E8D0E0035BB43 /* SelectionTableViewCell.swift */,
 				0BC1543F290E8D0E0035BB43 /* SelectionTableViewCell.xib */,
+				0BC15447290EC8DC0035BB43 /* DeviceChangeTableViewCell.swift */,
+				0BC15448290EC8DC0035BB43 /* DeviceChangeTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 				0BE9368F290D579C00D18B10 /* Assets.xcassets in Resources */,
 				0BE9368D290D579A00D18B10 /* Main.storyboard in Resources */,
 				0BE936A1290D57EC00D18B10 /* DeviceTableViewCell.xib in Resources */,
+				0BC1544A290EC8DC0035BB43 /* DeviceChangeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,10 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BC15431290E629F0035BB43 /* EditProductViewController.swift in Sources */,
+				0BC15446290EBF220035BB43 /* SubmitController.swift in Sources */,
+				0BC15444290EBD280035BB43 /* ResizeSubmitViewController.swift in Sources */,
 				0BE9368A290D579A00D18B10 /* ViewController.swift in Sources */,
 				0BC15433290E72400035BB43 /* StretchyTableHeaderView.swift in Sources */,
 				0BC15440290E8D0E0035BB43 /* SelectionTableViewCell.swift in Sources */,
 				0BC1542F290E37570035BB43 /* Color.swift in Sources */,
+				0BC15449290EC8DC0035BB43 /* DeviceChangeTableViewCell.swift in Sources */,
 				0BE93686290D579A00D18B10 /* AppDelegate.swift in Sources */,
 				0BC15436290E8AC90035BB43 /* LabelTableViewCell.swift in Sources */,
 				0BE93688290D579A00D18B10 /* SceneDelegate.swift in Sources */,

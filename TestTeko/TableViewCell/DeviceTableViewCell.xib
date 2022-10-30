@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.macro" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="d3D-QH-PnF">
-                        <rect key="frame" x="16" y="30" width="60" height="50"/>
+                        <rect key="frame" x="16" y="35" width="60" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="2TA-AI-Mub"/>
                             <constraint firstAttribute="height" constant="50" id="ReN-Uy-GhX"/>
@@ -80,7 +80,7 @@
                     <constraint firstItem="5XS-no-G7N" firstAttribute="leading" secondItem="d3D-QH-PnF" secondAttribute="trailing" constant="20" id="NoZ-a9-Odk"/>
                     <constraint firstItem="d3D-QH-PnF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Q4r-0J-vLR"/>
                     <constraint firstItem="83i-ve-6HN" firstAttribute="top" secondItem="S8P-Hd-lVb" secondAttribute="bottom" constant="5" id="TdM-Zn-0Wv"/>
-                    <constraint firstItem="d3D-QH-PnF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="apo-Az-4A7"/>
+                    <constraint firstItem="d3D-QH-PnF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="apo-Az-4A7"/>
                     <constraint firstItem="S8P-Hd-lVb" firstAttribute="top" secondItem="MLG-dP-vrs" secondAttribute="bottom" constant="5" id="hHq-GD-zg0"/>
                     <constraint firstItem="O4k-JA-YBB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qti-NB-J7w"/>
                     <constraint firstItem="O4k-JA-YBB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MLG-dP-vrs" secondAttribute="trailing" constant="10" id="se6-Ju-DQo"/>

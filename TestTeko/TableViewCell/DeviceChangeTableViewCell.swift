@@ -1,29 +1,27 @@
 //
-//  DeviceTableViewCell.swift
+//  DeviceChangeTableViewCell.swift
 //  TestTeko
 //
-//  Created by ERT_Macbook_123 on 10/29/22.
+//  Created by ERT_Macbook_123 on 10/30/22.
 //
 
 import UIKit
 
-protocol   UITableViewCellDelegate: AnyObject {
-    func didSelectItem(id: Int, url: URL)
-}
-
-class DeviceTableViewCell: UITableViewCell {
-    weak var didSelectChangeButton: UITableViewCellDelegate?
+class DeviceChangeTableViewCell: UITableViewCell {
     @IBOutlet private weak var deviceImage: UIImageView!
-    @IBOutlet private weak var changeButton: UIButton!
     @IBOutlet private weak var colorLabel: UILabel!
     @IBOutlet private weak var codeLabel: UILabel!
     @IBOutlet private weak var errorCodeLabel: UILabel!
     @IBOutlet private weak var nameDeviceLabel: UILabel!
-    private var url = URL(fileURLWithPath: "")
     private var iD = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     
     override func layoutSubviews() {
@@ -47,11 +45,6 @@ class DeviceTableViewCell: UITableViewCell {
         nameDeviceLabel.text = nameDevice ?? "Name Device"
         codeLabel.text = code ?? "000000"
         iD = id ?? 0
-        
-    }
-    
-    @IBAction func onTouchChange(_ sender: Any) {
-        didSelectChangeButton?.didSelectItem(id: iD, url: url)
     }
     
     func loadData(url: URL) {
@@ -67,4 +60,5 @@ class DeviceTableViewCell: UITableViewCell {
             }
         }
     }
+    
 }
