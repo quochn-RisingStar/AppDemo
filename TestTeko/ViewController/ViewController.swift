@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var deviceTableView: UITableView!
     var colors: [Color] = []
-    private var isFetchColorSuccess = false
     var productsError: [ProductError] = []
     
     override func viewDidLoad() {
@@ -30,6 +29,7 @@ class ViewController: UIViewController {
 
             case let .failure(error):
                 DispatchQueue.main.async {
+                    self?.alertError()
                     print("Error : \(error)")
                 }
             }
@@ -65,6 +65,8 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productsError.count
@@ -83,6 +85,8 @@ extension ViewController: UITableViewDataSource{
     
 }
 
+// MARK: - UITableViewDelegate
+
 extension ViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 145
@@ -97,14 +101,17 @@ extension ViewController:UITableViewDelegate{
     
 }
 
+// MARK: - Fetch Data
+
 extension ViewController {
     func fetchProductError(completion: @escaping (Result<Void, Error>) -> Void) {
         let address = "https://hiring-test.stag.tekoapis.net/api/products"
         if let url = URL(string: address) {
             URLSession.shared.dataTask(with: url) { [weak self] data, responds, error in
                 if let error = error {
-                    print("Error: \(error)")
-                } else if let responds = responds as? HTTPURLResponse, let data = data {
+                            print("Error: \(error)")
+                       }
+                else if let responds = responds as? HTTPURLResponse, let data = data {
                     print("Status Code : \(responds.statusCode)")
                     do { let decoder = JSONDecoder()
                         let productErrors =  try decoder.decode([ProductError].self, from: data)
@@ -123,7 +130,11 @@ extension ViewController {
         if let url = URL(string: address) {
             URLSession.shared.dataTask(with: url) { [weak self] data, responds, error in
                 if let error = error {
-                    print("Error: \(error)")
+                    DispatchQueue.main.async {
+                        self?.alertError()
+                         print("Error: \(error)")
+                    }
+                   
                 } else if let responds = responds as? HTTPURLResponse, let data = data {
                     print("Status Code : \(responds.statusCode)")
                     print(data as Any)
@@ -140,7 +151,15 @@ extension ViewController {
         }
     }
     
+    private func alertError(){
+        let alert = UIAlertController(title: "Error", message: "Can not load data! \n (Please check your API)", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
+
+// MARK: - UITableViewCellDelegate
 
 extension ViewController: UITableViewCellDelegate{
     func didSelectItem(id: Int, url:URL) {
@@ -153,6 +172,8 @@ extension ViewController: UITableViewCellDelegate{
         
     }
 }
+
+// MARK: - UIViewControllerTransitioningDelegate
 
 extension ViewController: UIViewControllerTransitioningDelegate{
         func presentationController(

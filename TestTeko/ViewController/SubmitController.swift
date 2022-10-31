@@ -39,6 +39,8 @@ class SubmitViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension SubmitViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productsError.count
@@ -55,6 +57,8 @@ extension SubmitViewController: UITableViewDataSource {
     }
     
 }
+
+// MARK: - UITableViewDelegate
 
 extension SubmitViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

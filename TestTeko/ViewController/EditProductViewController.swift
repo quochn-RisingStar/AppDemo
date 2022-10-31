@@ -64,6 +64,8 @@ class EditProductViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension EditProductViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -112,6 +114,9 @@ extension EditProductViewController: UITableViewDataSource {
     }
 }
 
+
+// MARK: - UITableViewDelegate
+
 extension EditProductViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -149,9 +154,13 @@ extension EditProductViewController{
     }
 }
 
+// MARK: - UIPickerViewDelegate
+
 extension EditProductViewController: UIPickerViewDelegate{
     
 }
+
+// MARK: - UIPickerViewDataSource
 
 extension EditProductViewController: UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
