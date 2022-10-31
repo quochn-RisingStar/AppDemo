@@ -133,6 +133,82 @@
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="75.669642857142847"/>
         </scene>
+        <!--Submit View Controller-->
+        <scene sceneID="qFP-6N-Lq1">
+            <objects>
+                <viewController storyboardIdentifier="SubmitViewController" id="HEz-lN-h9A" customClass="SubmitViewController" customModule="TestTeko" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="35b-Ca-0EU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-X0-msF">
+                                <rect key="frame" x="0.0" y="50" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-wy-DRU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Grt-tI-fos"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Submit Change" largeTitleDisplayMode="always" id="BIj-PI-OFf"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvy-qA-coz">
+                                <rect key="frame" x="255.5" y="807" width="110" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="0C4-Ca-nG9"/>
+                                    <constraint firstAttribute="height" constant="50" id="fN3-Y4-Sfx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="OK">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ontapOK:" destination="HEz-lN-h9A" eventType="touchUpInside" id="XdW-D8-Qfz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91I-Nj-g7j">
+                                <rect key="frame" x="48.5" y="807" width="110" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SEq-E1-bIt"/>
+                                    <constraint firstAttribute="width" constant="110" id="wfs-co-Kds"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ontapCancel:" destination="HEz-lN-h9A" eventType="touchUpInside" id="704-mB-ekW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XD3-yi-2yb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UMb-X0-msF" firstAttribute="top" secondItem="JdB-wy-DRU" secondAttribute="bottom" id="3iZ-PF-Pac"/>
+                            <constraint firstItem="UMb-X0-msF" firstAttribute="leading" secondItem="XD3-yi-2yb" secondAttribute="leading" id="5ZD-CN-DHW"/>
+                            <constraint firstItem="XD3-yi-2yb" firstAttribute="bottom" secondItem="91I-Nj-g7j" secondAttribute="bottom" constant="5" id="Bgs-BT-Xrv"/>
+                            <constraint firstItem="91I-Nj-g7j" firstAttribute="centerX" secondItem="35b-Ca-0EU" secondAttribute="centerX" multiplier="0.5" id="Itg-FR-jYg"/>
+                            <constraint firstItem="XD3-yi-2yb" firstAttribute="trailing" secondItem="UMb-X0-msF" secondAttribute="trailing" id="UDc-ap-AkV"/>
+                            <constraint firstItem="JdB-wy-DRU" firstAttribute="leading" secondItem="XD3-yi-2yb" secondAttribute="leading" id="am6-LM-A2a"/>
+                            <constraint firstItem="XD3-yi-2yb" firstAttribute="bottom" secondItem="Wvy-qA-coz" secondAttribute="bottom" constant="5" id="f2j-GN-Lbv"/>
+                            <constraint firstItem="Wvy-qA-coz" firstAttribute="top" secondItem="UMb-X0-msF" secondAttribute="bottom" constant="5" id="l0Z-Vd-hrh"/>
+                            <constraint firstItem="JdB-wy-DRU" firstAttribute="top" secondItem="35b-Ca-0EU" secondAttribute="top" id="vM0-5P-24k"/>
+                            <constraint firstItem="Wvy-qA-coz" firstAttribute="centerX" secondItem="35b-Ca-0EU" secondAttribute="centerX" multiplier="1.5" id="xJQ-BR-pUH"/>
+                            <constraint firstItem="JdB-wy-DRU" firstAttribute="trailing" secondItem="XD3-yi-2yb" secondAttribute="trailing" id="y7z-ZO-GOe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deviceTableView" destination="UMb-X0-msF" id="O9O-uh-7KP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64Z-oJ-af5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733.3333333333335" y="56.919642857142854"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.backward.circle.fill" catalog="system" width="128" height="121"/>

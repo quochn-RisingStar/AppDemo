@@ -47,10 +47,10 @@ class EditProductViewController: UIViewController {
             do {
                 let data =  try Data(contentsOf: url)
                 DispatchQueue.main.async {
-                    print(url)
                     self.headerView.imageView.image =  UIImage(data: data)
                 }
-            } catch {
+            }
+            catch {
             }
         }
     }
@@ -110,7 +110,7 @@ extension EditProductViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    }
+}
 
 extension EditProductViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -160,7 +160,7 @@ extension EditProductViewController: UIPickerViewDataSource{
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
       
-        return 5
+        return colors.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
